@@ -1,25 +1,35 @@
-// ARRAYS - Parte 1
+// ARRAYS - Exemplos
 
-/*
-1. e uma estrutura do javascript para se trabalhar com todo tipo de lista
+// Exemplo 00
+let array = ["banana", "maçã", "morango"] // inicializando o array
 
-2. Seus elementos são identificados por um índice inteiro começando pelo 0
+array[0] // desse modo, você faz referência a "posição" de um elemento do array, que no caso, é o elemento "banana", no índice 0
+array[1] //  elemento "maçã", no índice 1
+array[2] // elemento "morango", no índice 2
 
-3. Pode armazenar qualquer tipo de dado e ter qualquer tamanho
+//Também é possível atribuir um valor para um índice específico usando o método acima.
 
-4. Pode ser criado e utilizado através de colchetes []
--> let array = [] ou let array = [1, 2, 3, 4]
--> array[0] = "ola" | o numero dentro dos colchetes equivale a posicao que voce deseja mostrar
--> array[1] = 42 
+array[3] = "kiwi"
+
+console.log(array) // array = ["banana", "maçã", "morango", "kiwi"]
+    
 
 
-5. Possuem funções para vários casos de uso
-5.1 enfileirar e desenfileirar
-5.2 empilhar e desempilhar
-5.3 achar o índice de um valor
-5.4 cortar e concatenar
-etc
-*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Exemplos: 
