@@ -12,6 +12,7 @@ JavaScript - Module 2 | Data Structures and Functions
     * Vide exemplo: \class00_arrays\array.js | Exemplo 00
 
     Casos de uso
+    
     O array é uma estrutura muito dinâmica, possuindo vários casos de uso, como:
 
     1. Enfileirar e desenfileirar
