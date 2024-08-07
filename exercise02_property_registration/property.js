@@ -1,46 +1,22 @@
-// EXERCICIO | Cadastro de imoveis
+// EXERCICIO | Auxiliar
 
-let imoveis = []
-let option = ""
+let listaDeCompras = []
 
-do{
-    option = prompt("Imoveis cadastrados: " + imoveis.length + "\n\n" +
-        "Opcoes:\n1. Cadastrar um imovel\n2. Mais detalhes sobre os imoveis\n3. Sair"
-    )
+const compras = {}
+compras.skin = "creme"
+compras.mercado = "macarrao"
+compras.shopping = "calça"
 
-    switch(option){
-        case "1":
-            const imovel = {}
-            imovel.proprietario = prompt("Qual e o nome do proprietario?")   
-            imovel.quartos = parseFloat(prompt("Qual e a quantidade de quartos?"))         
-            imovel.banheiros = parseFloat(prompt("Qual e a quantidade de banheiros?"))
-            imovel.garagem = prompt("Possui garagem? (S/N)")
+const gostos = {}
+gostos.livros = "ficção"
+gostos.series = "the boys"
 
-            let confirmation = confirm("Confirme os dados:" + 
-                "\n\nNome do proprietario: " + imovel.proprietario +
-                "\nNumero de quartos: " + imovel.quartos +
-                "\nNumero de banheiros: " + imovel.banheiros +
-                "\nPossui garagem: " + imovel.garagem + "\n")
-                if(confirmation === true){
-                    imoveis.unshift(imovel)
-                }
-            break
-            case "2":
-                for(let i = 0; i < imoveis.length; i++){
-                    alert("Imovel " + (i + 1) +
-                    "\nProprietario: " + imoveis[i].proprietario +
-                    "\nNumero de quartos: " + imoveis[i].quartos +
-                    "\nNumero de banheiros: " + imoveis[i].banheiros +
-                    "\nPossui garagem: " + imoveis[i].garagem + "\n"
-                    )
-                }
-                break
-                case "3":
-                    alert("Encerrando programa...")
-                    break
-                    default:
-                        alert("Opcao invalida!")
-                        break
-    }
+listaDeCompras.push(compras)
+listaDeCompras.push(gostos)
 
-} while(option !== "3")
+console.log(listaDeCompras)
+
+console.log(listaDeCompras[0].skin)
+console.log(listaDeCompras[1].livros)
+
+

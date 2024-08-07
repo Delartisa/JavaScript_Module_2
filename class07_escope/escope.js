@@ -1,5 +1,4 @@
-// Escopo | contexto onde a variavel foi declarada
-// existe o escopo mais externo e o mais interno
+// Escopo | EXEMPLOS
 
 let nivelDeEnsino = "ensino fundamental" // escopo mais externo
 

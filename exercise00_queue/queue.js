@@ -1,32 +1,38 @@
 // EXERCICIO | Fila de espera
 
-let queue = [];
-let option = "";
+let option = ""
+let patient = ""
+let queue = []
 
-do{ 
-    let patients = ""
-    for(let i = 0; i < queue.length; i++){
-        patients += (i + 1) + "o - " + queue[i] + "\n"
-    }
+do{
+    for (let i = 0; i < queue.length; i++) {
+        patient += (i + 1) + "º " + queue[i] + "\n"
+    }    
 
-    option = prompt("Lista de pacientes:\n" +
-        patients + "\n" + "a) Adicionar paciente\n b) Consultar paciente\n c) Sair"
+    option = prompt(
+        "fila de espera:\n\n" +
+        patient +
+        "\nOpções:" +
+        "\n\n1. Adicionar paciente" +
+        "\n2. Consultar paciente" +
+        "\n3. sair"
     )
-    
-    switch(option){
-        case "a":
-            let newPatient = prompt("Escreva o nome do novo paciente:")
-            queue.push(newPatient)
-            break
-            case "b":
-                let removedPatient = queue.shift()
-                alert("Paciente " + removedPatient + " consultado.")
-                break
-                case "c":
-                    alert("Encerrando...")
-                    default:
-                        alert("Opcao inavlida!")
+
+    switch (option) {
+        case "1":
+            let newPatient = prompt("Qual é o nome do paciente?")
+         queue.push(newPatient)
+            break;
+        case "2":
+            let removedPatient = queue.shift()
+            alert("Paciente " + removedPatient + " consultado.")
+            break;
+        case "3":
+            alert("Encerrando...")
+            break;
+        default:
+            alert("Opção inválida!")
+            break;
     }
 
-} while(option !== "c")
-
+} while(option !== "3")

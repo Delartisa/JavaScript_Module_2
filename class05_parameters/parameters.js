@@ -1,4 +1,4 @@
-// FUNCAO - PARAMETROS (entradas)
+// FUNCAO - PARAMETROS (entradas) | EXEMPLOS
 
 function double(x) { // dentro das aspas, vamos declarar as "variaveis" que serao utilizadas na funcao
     alert("O dobro de " + x + " e " + (x * 2))

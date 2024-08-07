@@ -1,79 +1,77 @@
-// Geometric Calculator
+// EXERCÍCIO | Calculadora geométrica
 
-function areaTriangulo() { // define triangle area
-    let base = parseFloat(prompt("Qual é o valor da base?")) // create variable to store the value
-    let altura = parseFloat(prompt("Qual é o valor da altura?")) 
-    return base * altura / 2 // return the result
+function calcularAreaTriangulo(){
+    let base = parseFloat(prompt("Infome o valor da base:"))
+    let altura = parseFloat(prompt("Informe o valor da altura:"))
+    let areaTriangulo = (base * altura) / 2
+    return alert("A área do triângulo é de " + areaTriangulo + " m2.")
 }
 
-function areaRetangulo() {
-    let base = parseFloat(prompt("Qual é o valor da base?"))
-    let altura = parseFloat(prompt("Qual é o valor da altura?"))
-    return base * altura
+function calcularAreaRetangulo(){
+    let base = parseFloat(prompt("Infome o valor da base:"))
+    let altura = parseFloat(prompt("Informe o valor da altura:"))
+    let areaRetangulo = base * altura
+    return alert("A área do triângulo é de " + areaRetangulo + " m2.")
 }
 
-function areaQuadrado() {
-    let lado = parseFloat(prompt("Qual é o valor do lado?"))
-    return lado * lado
+function calcularAreaQuadrado(){
+    let lado = parseFloat(prompt("Infome o valor do lado:"))
+    let areaQuadrado = lado * lado
+    return alert("A área do quadrado é de " + areaQuadrado + " m2.")
 }
 
-function areaTrapezio() {
-    let baseMaior = parseFloat(prompt("Qual é o valor da base maior?"))
-    let baseMenor = parseFloat(prompt("Qual é o valor da base menor?"))
-    let altura = parseFloat(prompt("Qual é o valor da altura?"))
-    return (baseMaior + baseMenor) * altura / 2
+function calcularAreaTrapezio(){
+    let baseMaior = parseFloat(prompt("Informe o valor da base maior:"))
+    let baseMenor = parseFloat(prompt("Informe o valor da base menor:"))
+    let altura = parseFloat(prompt("Informe o valor da altura:"))
+    let areaTrapezio = ((baseMaior + baseMenor) * altura) / 2
+    return alert("A área do trapézio é de " + areaTrapezio + " m2.") 
 }
 
-function areaCirculo() {
-    let raio = parseFloat(prompt("Qual é o valor do raio?"))
-    return 3.14 * (raio * raio)
+function calcularAreaCirculo (){
+    let raio = parseFloat(prompt("Informe o valor do raio:"))
+    let areaCirculo = 3.14 * (raio * raio)
+    return alert("A área do círculo é de " + areaCirculo + " m2.") 
 }
 
-function menu() { // create a new function to show the menu
-    return prompt("Calculadora Geométrica" +
-    "\n\nEscolha a forma geométrica que desejar calcular a área:" +
-    "\n1. Triângulo" +
+function executar(){
+    let option = ""
+    do { option = prompt("---Calculadora geométrica---" +
+    "\nEscolha a forma geométrica que deseja calcular:" +
+    "\n\n1. Triângulo" +
     "\n2. Retângulo" +
     "\n3. Quadrado" +
     "\n4. Trapézio" +
     "\n5. Círculo" +
-    "\n6. Sair\n")
+    "\n\nx. Encerrar programa"
+    )
+
+    switch (option) {
+        case "1":
+            calcularAreaTriangulo()
+            break;
+        case "2":
+            calcularAreaRetangulo()
+            break;
+        case "3":
+            calcularAreaQuadrado()
+            break;
+        case "4":
+            calcularAreaTrapezio()
+            break;
+        case "5":
+            calcularAreaCirculo()
+            break;
+        case "x":
+            alert("Encerrando...")
+            break;
+        default:
+            alert("Opção inválida!")
+            break;
+    }
+    
+
+    } while (option !== "x")
 }
 
-function execute() { // function to execute the program
-    let option = "" // define option as a string
-
-    do{
-        option = menu() // call the function "menu" and
-        let result
-
-        switch(option){
-            case "1":
-                result = areaTriangulo()
-                break
-            case "2":
-                result = areaRetangulo()
-                break
-            case "3":
-                result = areaQuadrado()
-                break
-            case "4":
-                result = areaTrapezio()
-                break
-            case "5":
-                result = areaCirculo()
-                break
-            case "6":
-                alert("Encerrando...")
-                break
-            default:
-                alert("Opção inválida!")
-                break
-        }
-        if(result) {
-            alert("Valor da área: " + result)
-        }
-    } while (option !== "6")
-}
-
-execute()
+executar()

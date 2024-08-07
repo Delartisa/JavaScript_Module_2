@@ -1,23 +1,5 @@
-// OBJETOS | estrutura do js para trabalhar com dicionarios chave-valor
-
-/*
-Sintaxe:
-
-const objeto = { // as chaves sao o que transformam uma variável em um objeto
-chave1: propriedade1,
-chave2: propriedade2
-} 
-
-# OBS1: os elementos de um obj podem ser numeros, booleanos ou strings
-# OBS2: diferente do array, um objeto não armazena as variaveis em ordem
-
-Para executar um obj, use:
-
-objeto.<nome da chave>
-*/
-
-// exemplo:
-
+// OBJETOS | EXEMPLOS
+// Exemplo 00
 const objeto = {
     name: "isabelle"
 }
@@ -29,7 +11,7 @@ console.log(objeto) // mostra o objeto, chaves e suas respectivas propriedades
 
 const pessoa = {}
 
-pessoa.nickname = "davizinho" // chave - propriedade, respectivamente
+pessoa.nickname = "david" // chave - propriedade, respectivamente
 pessoa.age = "19"
 pessoa.friends = ["isa", "natan", "kayke"] // o obj permite arrays
 pessoa.localization = {

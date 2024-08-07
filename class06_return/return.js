@@ -1,5 +1,4 @@
-// RETURN - permite trabalhar com valores fora da funcao
-
+// RETURN - permite trabalhar com valores fora da funcao | EXEMPLOS
 
 function averageCalculator (a, b, c) { // estabelecer parametros
     let average = (a + b + c) / 3 // criar variavel para receber o calculo

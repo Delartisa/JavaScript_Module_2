@@ -1,4 +1,4 @@
-// ARRAYS - Exemplos
+// ARRAYS - EXEMPLOS
 
 // Exemplo 00
 let array = ["banana", "maçã", "morango"] // inicializando o array
@@ -13,59 +13,57 @@ array[3] = "kiwi"
 
 console.log(array) // array = ["banana", "maçã", "morango", "kiwi"]
     
+//=====================================================================
 
+// Exemplo 01 - Função PUSH
+const numbers = ["one", "two", "three", "four", "five"]
+console.log(numbers)
 
+numbers.push("six", "seven") // insercao de dado ao final do array 
+console.log(numbers)
 
+// Exemplo 01 - Função UNSHIFT
+numbers.unshift("zero") // insercao ao comeco do array
+console.log(numbers)
 
+// Exemplo 01 - Função POP
+const lastElement = numbers.pop() // retira o ultimo elemento do array
+console.log(numbers)
+console.log(lastElement) // retorna o elemento retirado
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Exemplos: 
-
-// funcao push
-const teste = ["one", "two", "three", "four", "five"]
-console.log(teste)
-
-teste.push("six", "seven") // insercao de dado ao final do array 
-console.log(teste)
-
-//funcao unshift
-teste.unshift("zero") // insercao ao comeco do array
-console.log(teste)
-
-// funcao pop
-const lastElement = teste.pop() // retira o ultimo elemento do array e o retorna
-console.log(teste)
-console.log(lastElement)
-
-// funcao shift
-let firstOutElement = teste.shift() // retira o primeiro elemento do array
+// Exemplo 01 - Função SHIFT
+let firstOutElement = numbers.shift() // retira o primeiro elemento do array
 console.log(firstOutElement)
 
-// funcao includes
-const doHave = teste.includes("two") // pesquisa por um elemento
+// Exemplo 01 - Função INCLUDES
+const doHave = numbers.includes("two") // pesquisa por um elemento
 console.log(doHave)
 
-// funcao indexOf
-const index = teste.indexOf("two") // pesquisa por um elemento e retorna o indice dele
+// Exemplo 01 - Função INDEXOF
+const index = numbers.indexOf("two") // pesquisa por um elemento e retorna o indice dele
 console.log(index)
 
-// funcao slice
-const slice = teste.slice(0, 4) // faz uma copia de uma parte do array | o ultimo indice indicado nos parenteses nao e contado
+// Exemplo 01 - Função SLICE
+const slice = numbers.slice(0, 4) // faz uma copia de uma parte do array | o ultimo indice indicado nos parenteses nao e contado
 console.log(slice)
 
 // a contagem tambem pode ser feita ao contrario
-const invertedSlice = teste.slice(-4)
+const invertedSlice = numbers.slice(-4)
 console.log(invertedSlice)
+
+// Exemplo 01 - Função CONCAT
+const array1 = ["zero", "one", "two", "three", "four"]
+const array2 = ["five", "six", "seven", "eight", "nine"]
+
+const all = array1.concat(array2) // concatena arrays, numeros, strings
+console.log(all)
+
+// Exemplo 01 - Função SPLICE
+const removedElements = all.splice(2, 1, "dois") // remove um ou mais elementos de um array e ele pode ser substituido por outro
+console.log(removedElements)
+
+// iteracao sobre elementos
+for(let indice = 0; indice < all.length; indice++){
+    alert("Elemento " + indice + ": " + all[indice])
+}
+

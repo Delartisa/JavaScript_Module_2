@@ -1,33 +1,34 @@
-const stack = [];
-let option = "";
+// EXERCÍCIO | Pilha de cartas
 
-do{
-    option = prompt("Quantidade de cartas: " + stack.length + "\n\n" +
-        "1. Adicionar uma carta" + "\n" +
-        "2. Puxar uma carta" + "\n" +
-        "3. Sair" + "\n"
-    );
+let option = ""
+const cards = []
 
-    switch(option){
+do { option = prompt("Cartas no baralho: " + cards.length +
+    "\nOpções" +
+    "\n\n1. Adicionar uma carta" +
+    "\n2. Puxar uma carta" +
+    "\n3. Sair")
+
+    switch (option) {
         case "1":
-            let newCard = prompt("Escreva o nome da carta a ser adicionada:");
-            stack.unshift(newCard)
-            break
-            case "2":
-                let removedCard = stack.pop()
-                if(!removedCard){
-                    alert("Nao ha cartas disponiveis no baralho.")
-                } else{
-                    alert("A carta retirada foi um " + removedCard)
-                }
-                break
-                case "3":
-                    alert("Encerrando o programa...")
-                    break
-                    default:
-                        alert("Opcao invalida!")
-                        break
-    };
+            let newCard = prompt("Qual carta deseja adiconar?")
+            cards.unshift(newCard)
+            break;
+        case "2":
+            if (cards.length === 0){
+                alert("Não há cartas no baralho.")
+            } else{
+                let withdrawCard = cards.shift()
+                alert("Carta retirada: " + withdrawCard)
+            }
+            break;
+        case "3":
+            alert("Encerrando...")
+            break;
+        default:
+            alert("Opção inválida!")
+            break;
+    }
 
 
-} while(option !== "3");
+} while (option !== "3")
