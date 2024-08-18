@@ -1,51 +1,57 @@
-// HIGH ORDER FUNCTION - 1 | funcao que recebe outra funcao como parametro
+//  HIGH-ORDER FUNCTIONS | EXEMPLOS
 
-// operacao() -> chamada da funcao, resultado
-// operaccao -> funcao em si
-
-function calcular(a, b, operacao) { // uma funcao nos parametros | a funncao calcular e chamada de high order function
-    console.log("Realizando uma operacao")
-    const resultado = operacao(a, b) // chamada da funcao | a insercao dessa funcao em outra funcao permite um grande dinamismo, ja ela  pode se tornnar qualquer outra funcao
-    return resultado
+// Exemplo 00
+function calculo(x, y, operacao){ // inicialize a função com dois parametros quaisquer e o parametro dinâmico "operacao"
+    let resultadoDaOperacao = operacao(x, y) // crie uma variável para armazenar o resultado da função
+    return resultadoDaOperacao // retorne apenas o resultado
 }
 
-
-function somar(x, y) {
-    console.log("Realizando uma soma")
-    return x + y
+function somar(x, y){ // crie outras funções com diferentes propósitos
+return x + y
 }
 
-console.log(calcular(3, 5, somar)) //  essa declaracao de parametros, o 3 parametro "operacao" se torna o parametro "somar"
+function subtrair(x, y){
+return x - y
+}
 
-console.log(calcular(8, 4, function(x, y) {
-    console.log("realizando uma subtracao")
-    return x - y
-})) // tambem  podemos usar as funcoes anonimas nesse caso
+function multiplicar(x, y){
+return x * y
+}
 
-function showElements(elemento, indice, array) { // criando um obj para mostrar os itens
-    console.log({
+console.log(calculo(5, 5, multiplicar)) // passe os valores que escolher e no final, a operação que deseja realizar. Nesse caso, o terceiro parâmetro vai substituir a função "operação", possibilitando torna-lá qualquer outra função.
+
+// também é possível criar uma função nos próprios parametros de entrada, como por exemplo:
+
+console.log(calculo(5, 5, function(x,y) {
+    return x / y // criamos uma funcao anônima para realizar a divisão
+}))
+
+
+// Exemplo 01 - criando uma estrutura de repetição para contar elementos de um array
+function exibirElemento(elemento, indice, array){ // estabelecendo parâmetros
+    console.log({ // formatando a saída de dados
         elemento,
         indice,
         array
     })
 }
 
-const lista = ["maca", "banana", "laranja", "limao"] // ccrianddo array para armazenar os itens
+let lista = ["zero", "um", "dois", "três"]
 
-for (let i = 0; i < lista.length; i++){ // i = 0 | i < 3 | i++
-    showElements(lista[i], i, lista) // lista[0], lista[1].. | 0, 1.. |  lista = (maca, banana, laranja, limao)
+for (let i = 0; i < lista.length; i++) { // criando a estrutura de repetição para mostrar os elementos
+    exibirElemento(lista[i], i, lista)
 }
 
-// metodos dos arrays
+// forEach - Usado com arrays | para cada item de um array, ele mostra o elemento(string), índice(número) e o próprio array
+lista.forEach(exibirElemento)  
 
-lista.forEach(showElements) // usamos o forEach para ccontar  cada item do array e simplificar o codigo
+// * também é possível simplificar usando as funções anônimas, dessa forma:
 
-lista.forEach(function (elemento, indice, array) {
-    console.log({
-        elemento,
-        indice,
-        array
-    })
-}
+lista.forEach(function (item, posicao, grupo){
+ console.log({
+    item,
+    posicao,
+    grupo
+ })   
+})
 
-)

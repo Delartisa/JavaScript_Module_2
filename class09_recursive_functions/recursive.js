@@ -1,9 +1,9 @@
-// Funcao recursiva | funcao que "se chama" (looping)
+// Funcao recursiva | EXEMPLOS
 
 function dividir(num) { // cria uma funcao chamada de "dividir"
     console.log(num) // mostra os numeros no console
     if (num % 2 === 0){ // cria uma condicao, onde ela ira se repetir ate que se torne falsa
-        dividir(num / 2) // chama a funcao | importante se atentar que nessa chamada, a divisao por dois age como um limitador da funcao, impedindo que vire um loop eterno. entao, e importante lembrar que, ao chamar um funcao dentro da funcao, os parametros precisam ter algo que quebre o loop em algum momento 
+        dividir(num / 2) // chama a funcao | importante se atentar que nessa chamada, a divisao por dois age como um limitador da funcao, impedindo que vire um loop eterno. Então é importante lembrar que ao chamar um funcao dentro da funcao, os parametros precisam ter algo que quebre o loop em algum momento.
     } else { 
         return num // quando a condicao se tornar falsa, ela caira no else, onde o "looping" acaba
     }
@@ -17,7 +17,7 @@ function fatorial(num) {
     console.log("Numero: " + num) // mostra o numero que esta sendo multiplicado
     if(num === 0){ // caso base, ja que 0! e igual a 1
         return 1
-    } else if (num === 1){ // mesma resposta do if  
+    } else if (num === 1){ // !1 também é 1, logo, para não ter bugs, também retornamos 1  
         return 1
     }  else {
         console.log(num + " * !" + (num - 1)) // mostra a operacao 

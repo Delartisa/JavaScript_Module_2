@@ -1,7 +1,6 @@
-// METODOS | funcoes atreladas a objetos (funcoes dentro de obj)
+// METODOS | EXEMPLOS
 
-
-// ex: console e um objeto, mas console.log e uma funcao,  pois o "log" e como uma funcao dentro do console, essas funcoes dentro de objs sao nomeadas de metodos
+// * O console é um objeto, mas console.log e uma funcao,  pois o "log" e como uma funcao dentro do console, essas funcoes dentro de objs sao nomeadas de métodos.
 
 let pessoa = {
     nome: "isabelle",

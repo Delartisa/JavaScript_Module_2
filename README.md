@@ -159,6 +159,80 @@ function maiorDeIdade(age) {
 
 É o contexto onde a variável foi declarada, podendo ser mais exeterno ou mais interno. Uma variável declarada no escopo mais externo pode ser usada em um escopo mais interno, mas o contrário não é verdade.
 
+# Métodos
+
+Métodos são basicamente funções atreladas a objetos. Na hora da declaração da função, apenas passe o nome dela e os parenteses, sem o "function" antes.
+
+Sintaxe:
+
+let objeto = {
+    //...
+    funcao() {
+
+    }
+}
+
+Como chamar:
+
+objeto.funcao()
+
+* Para referenciar o próprio objeto, use "this", como por exemplo:
+
+let pessoa = {
+    nome: "isa",
+    idade: 19,
+    saudacao() {
+        alert("Olá, mundo! Meu nome é " + this.name) // referencia propriedades do obj
+    }
+}
+
+# Funções recursivas
+
+Função que cria um encadeiamento chamando ela mesma, gerando uma espécie de loop. É necessário se atentar a condição para a quebra do loop, que caso não exista, a função se tornará infinita.
+
+** Encadeiamento
+
+Um bom exemplo é que em uma função, caso você crie 3 condições, ela irá adentrar até a terceira e vai repeti-lá até que se torne falsa, passando para a segunda condição, que fará o mesmo e seguirá sucessivamente até que todas as condições se tornem falsas.
+
+Primeira condição (V) -> Segunda condição (V) -> Terceira condição (V)
+Terceira condição (F) -> Segunda condição (F) -> Primeira condição (F)
+
+* Comece a condição pelo caso base.
+
+# Funções anônimas
+
+Funções anônimas não são nada mais, nada menos que uma função atribuida a uma variável, onde não há necessidade de dar nome para a função, apenas para a variável.
+
+Sintaxe:
+
+const nomeDaVariavelFuncao = function() {
+    //...
+    return ...
+}
+
+As funções anônimas também são dinâmicas, então é possível atribuir outra função para a variável.
+
+*OBS: Ao criar uma função, não há necessidade de se preocupar com sua posicao no codigo, pois ao rodar o código, ela se comporta como se estivesse no topo do codigo. o mesmo não vale para funções dentro de variáveis, entao, e necessario criar a variavel no topo, para quando chama-la, tudo funcionar corretamente.
+
+# High-Order functions
+
+High-order functions são funções que usam outra função como parâmetro ou retornam uma função.
+
+# Métodos do array
+
+forEach - para cada item de um array, ele mostra o elemento(string), índice(número) e o próprio array  |  use nomeDoArray.forEach
+
+map - cria um novo array sem modificar o array original, geralmente usado para filtrar elementos de um array com objetos e criar um novo array com esses elementos. |  use const nomeDaVariavel = nomeDoArrayOriginal.map(function(nomeDoNovoArray) {
+    return nomeDoNovoArray.chaveQueDesejaFiltrar
+})
+
+filter - filtra e cria um novo array baseado nos citerios estabelecidos | const nomeDaVariavel = nomeDoArrayOriginal.filter(function(nomeDoNovoArray) {
+    return nomeDoNovoArray.chaveQueDesejaFiltrar === "criterio"
+})
+
+reduce - permite reduzir o array a um unico valor
+
+
 
 
 
